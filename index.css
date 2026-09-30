@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap");
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans Thai", system-ui, sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  background: linear-gradient(160deg, #2563eb 0%, #1a9bc8 55%, #14b8a6 100%) fixed;
+}
+
+.page { max-width: 1040px; margin: 0 auto; padding: 24px 20px 56px; }
+
+h1, h2, h3, h4, p { margin: 0; }
+
+/* ---------- แผงกระจกฝ้า ---------- */
+.glass {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.navbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 14px 24px; margin-bottom: 22px;
+}
+.brand { font-size: 1.1rem; font-weight: 700; }
+.nav-links { display: flex; gap: 20px; font-size: 0.92rem; font-weight: 500; }
+.nav-links a { color: #fff; text-decoration: none; opacity: 0.8; }
+.nav-links a.active { opacity: 1; border-bottom: 2px solid #fff; }
+
+.notice { padding: 22px 28px; margin-bottom: 22px; }
+.kicker { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.notice h1 { margin: 2px 0 6px; font-size: 1.9rem; }
+.notice p:last-child { font-weight: 500; }
+
+.board { display: grid; grid-template-columns: 280px 1fr; gap: 22px; align-items: start; }
+
+/* ---------- การ์ดโปรไฟล์ ---------- */
+.profile-card {
+  padding: 28px 24px;
+  color: #111827;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22), 0 2px 6px rgba(15, 23, 42, 0.1);
+  text-align: center;
+}
+.avatar {
+  width: 72px; height: 72px; margin: 0 auto 12px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: #2563eb; color: #fff; font-size: 1.6rem; font-weight: 700;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+}
+.profile-name { font-size: 1.2rem; }
+.profile-role { margin-bottom: 12px; color: #6b7280; font-size: 0.92rem; }
+.profile-bio { margin-bottom: 16px; color: #374151; opacity: 0.85; font-size: 0.9rem; }
+.stats { display: flex; justify-content: space-around; margin: 0 0 18px; padding: 12px 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
+.stats b { display: block; font-size: 1.15rem; }
+.stats span { color: #6b7280; font-size: 0.75rem; }
+
+.badge, .pill {
+  display: inline-block; padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem; font-weight: 600;
+}
+.badge { background: #e0f2fe; color: #0c4a6e; }
+
+/* ---------- รายการบทเรียน ---------- */
+.lessons-head { margin-bottom: 14px; }
+.lessons-head h2 { font-size: 1.3rem; }
+.lessons-head p { font-size: 0.88rem; opacity: 0.9; }
+.lessons { display: grid; gap: 16px; }
+
+.tile {
+  display: flex; gap: 16px; align-items: center;
+  padding: 14px;
+  color: #111827;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.18);
+}
+.cover {
+  flex: none;
+  display: grid; place-items: center;
+  width: 130px; height: 90px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #60a5fa, #7c3aed);
+  color: #fff; font-size: 1.4rem; font-weight: 700;
+}
+.tile h3 { font-size: 1.05rem; }
+.tile-meta { margin-bottom: 8px; color: #475569; font-size: 0.82rem; }
+.pill { background: #eef2f7; color: #475569; }
+.pill.live { background: #dcfce7; color: #166534; }
+
+/* เก็บถาวร */
+.tile.archived { box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1); }
+.tile.archived .cover { filter: grayscale(100%) brightness(0.82); }
+.tile.archived .tile-meta { opacity: 0.7; }
+
+/* ล็อก */
+.tile.locked { box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1); }
+.tile.locked .cover { filter: grayscale(60%) brightness(0.7); opacity: 0.7; }
+.tile.locked h3, .tile.locked .tile-meta { opacity: 0.55; }
+
+.footer { margin-top: 22px; padding: 16px 24px; text-align: center; font-size: 0.85rem; font-weight: 500; }
+
+@media (max-width: 720px) {
+  .board { grid-template-columns: 1fr; }
+  .navbar { flex-direction: column; }
+  .tile { flex-direction: column; align-items: stretch; }
+  .cover { width: auto; }
+}

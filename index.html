@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="page">
+
+  <nav class="navbar glass">
+    <span class="brand">CSS Academy</span>
+    <div class="nav-links">
+      <a class="active" href="#">แดชบอร์ด</a>
+      <a href="#">บทเรียน</a>
+      <a href="#">ความคืบหน้า</a>
+    </div>
+  </nav>
+
+  <header class="notice glass">
+    <p class="kicker">Daily CSS</p>
+    <h1>Effect Review</h1>
+    <p>ใช้ glass effect อย่างพอดี เพื่อให้ข้อมูลเด่นขึ้นโดยไม่รบกวนการอ่าน</p>
+  </header>
+
+  <main class="board">
+    <aside class="profile-card">
+      <div class="avatar">A</div>
+      <h2 class="profile-name">Araya W.</h2>
+      <p class="profile-role">Frontend Learner</p>
+      <p class="profile-bio">กำลังฝึก CSS effects เพื่อทำ UI ให้อ่านง่ายและดูมีมิติ</p>
+      <div class="stats">
+        <div><b>5</b><span>กำลังเรียน</span></div>
+        <div><b>12</b><span>เรียนจบ</span></div>
+        <div><b>3</b><span>ล็อก</span></div>
+      </div>
+      <span class="badge">Effects ready</span>
+    </aside>
+
+    <section>
+      <div class="lessons-head">
+        <h2>บทเรียนของฉัน</h2>
+        <p>ต่อจากที่เรียนค้างไว้ได้เลย</p>
+      </div>
+      <div class="lessons">
+        <article class="tile">
+          <div class="cover">CSS</div>
+          <div>
+            <h3>Effects &amp; Visuals</h3>
+            <p class="tile-meta">บทเรียนปัจจุบัน · เรียนแล้ว 5 จาก 6 เรื่อง</p>
+            <span class="pill live">In progress</span>
+          </div>
+        </article>
+
+        <article class="tile archived">
+          <div class="cover">Box</div>
+          <div>
+            <h3>Old Effects Notes</h3>
+            <p class="tile-meta">บทเรียนรุ่นก่อน เก็บไว้สำหรับเทียบแนวคิด</p>
+            <span class="pill">Archived</span>
+          </div>
+        </article>
+
+        <article class="tile locked">
+          <div class="cover">Pos</div>
+          <div>
+            <h3>Layout Basics</h3>
+            <p class="tile-meta">ปลดล็อกหลังจบเฟสนี้</p>
+            <span class="pill">Locked</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">© CSS Academy · สร้างด้วย border-radius, box-shadow, opacity, filter และ backdrop-filter</footer>
+
+</div>
+</body>
+</html>
